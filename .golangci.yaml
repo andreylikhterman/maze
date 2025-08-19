@@ -27,7 +27,6 @@ linters:
     - nakedret
     - nolintlint
     - rowserrcheck
-    - exportloopref
     - staticcheck
     - stylecheck
     - typecheck
@@ -59,12 +58,12 @@ linters-settings:
 
 issues:
   exclude-rules:
-    - path: '_test.go'
+    - path: "_test.go"
       linters:
         - funlen
         - dupl
 
-    - path: '_test.go'
+    - path: "_test.go"
       linters:
         - gocritic
       text: 'hugeParam\: \S+ is heavy \(\d+ bytes\)\; consider passing it by pointer'

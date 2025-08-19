@@ -155,6 +155,7 @@ func renderSurfaceWithPath(cell domain.Cell, path []domain.Coordinate) string {
 			if idx == 0 || idx == len(path)-1 {
 				return "  📍   "
 			}
+
 			return "  🟥   "
 		}
 	}
