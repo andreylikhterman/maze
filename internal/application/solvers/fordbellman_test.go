@@ -3,7 +3,7 @@ package solvers
 import (
 	"testing"
 
-	domain "MazeApp/internal/domain"
+	domain "maze/internal/domain"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -15,8 +15,8 @@ func TestFordBellmanSolver_Initialize(t *testing.T) {
 	fordBellman.maze = domain.NewMaze(height, width)
 	fordBellman.initialize()
 
-	for i := 0; i < height; i++ {
-		for j := 0; j < width; j++ {
+	for i := range height {
+		for j := range width {
 			coord := domain.NewCoordinate(i, j)
 			assert.Equal(t, INF, fordBellman.distance[coord])
 		}

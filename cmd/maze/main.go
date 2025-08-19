@@ -1,11 +1,11 @@
 package main
 
 import (
-	application "MazeApp/internal/application"
-	generators "MazeApp/internal/application/generators"
-	renderers "MazeApp/internal/application/renderers"
-	solvers "MazeApp/internal/application/solvers"
-	input "MazeApp/internal/infrastructure/input"
+	application "maze/internal/application"
+	generators "maze/internal/application/generators"
+	renderers "maze/internal/application/renderers"
+	solvers "maze/internal/application/solvers"
+	input "maze/internal/infrastructure/input"
 )
 
 func main() {

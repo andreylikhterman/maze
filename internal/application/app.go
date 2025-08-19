@@ -1,8 +1,8 @@
 package application
 
 import (
-	domain "MazeApp/internal/domain"
 	"fmt"
+	domain "maze/internal/domain"
 )
 
 type MazeApp struct {
@@ -11,7 +11,7 @@ type MazeApp struct {
 	Renderer  domain.Renderer
 }
 
-func (app MazeApp) Run(width, height int, start, end domain.Coordinate) {
+func (app *MazeApp) Run(width, height int, start, end domain.Coordinate) {
 	maze := app.Generator.Generate(height, width)
 
 	path := app.Solver.Solve(maze, start, end)

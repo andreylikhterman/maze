@@ -3,7 +3,7 @@ package generators
 import (
 	"testing"
 
-	domain "MazeApp/internal/domain"
+	domain "maze/internal/domain"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -15,8 +15,8 @@ func TestPrimGenerator_Initialize(t *testing.T) {
 
 	generator.Initialize()
 
-	for i := 0; i < height; i++ {
-		for j := 0; j < width; j++ {
+	for i := range height {
+		for j := range width {
 			coord := domain.NewCoordinate(i, j)
 			assert.False(t, generator.isVisited[coord])
 		}

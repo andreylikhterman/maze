@@ -1,6 +1,7 @@
 package random
 
 import (
+	"slices"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -10,32 +11,14 @@ func TestElement_IntArray(t *testing.T) {
 	array := []int{1, 2, 3, 4, 5}
 	element := Element(array)
 
-	found := false
-
-	for _, val := range array {
-		if val == element {
-			found = true
-			break
-		}
-	}
-
-	assert.True(t, found)
+	assert.True(t, slices.Contains(array, element))
 }
 
 func TestElement_StringArray(t *testing.T) {
 	array := []string{"apple", "banana", "cherry"}
 	element := Element(array)
 
-	found := false
-
-	for _, val := range array {
-		if val == element {
-			found = true
-			break
-		}
-	}
-
-	assert.True(t, found)
+	assert.True(t, slices.Contains(array, element))
 }
 
 func TestIndex_IntArray(t *testing.T) {

@@ -1,9 +1,9 @@
 package generators
 
 import (
-	domain "MazeApp/internal/domain"
-	algorithm "MazeApp/pkg/algorithm"
-	random "MazeApp/pkg/random"
+	domain "maze/internal/domain"
+	algorithm "maze/pkg/algorithm"
+	random "maze/pkg/random"
 )
 
 type PrimGenerator struct {

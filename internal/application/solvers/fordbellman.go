@@ -1,7 +1,7 @@
 package solvers
 
 import (
-	domain "MazeApp/internal/domain"
+	domain "maze/internal/domain"
 )
 
 const (

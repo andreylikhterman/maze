@@ -1,7 +1,7 @@
 package renderer
 
 import (
-	"MazeApp/internal/domain"
+	"maze/internal/domain"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -23,7 +23,7 @@ func TestRenderWithPath_SingleCellMazeWithPath(t *testing.T) {
 
 	expected := "+-------+\n" +
 		"|       |\n" +
-		"|  🟥   |\n" +
+		"|  📍   |\n" +
 		"|       |\n" +
 		"+-------+\n"
 
@@ -39,7 +39,7 @@ func TestRenderWithPath_MultipleCellsMazeWithPath(t *testing.T) {
 
 	expected := "+-------+-------+\n" +
 		"|       |       |\n" +
-		"|  🟥   |  🟥   |\n" +
+		"|  📍   |  📍   |\n" +
 		"|       |       |\n" +
 		"+-------+-------+\n"
 

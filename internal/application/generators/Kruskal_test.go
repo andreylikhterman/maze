@@ -3,9 +3,9 @@ package generators
 import (
 	"testing"
 
-	domain "MazeApp/internal/domain"
-	algorithm "MazeApp/pkg/algorithm"
-	math "MazeApp/pkg/math"
+	domain "maze/internal/domain"
+	algorithm "maze/pkg/algorithm"
+	math "maze/pkg/math"
 
 	"github.com/stretchr/testify/assert"
 )

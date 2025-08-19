@@ -1,7 +1,7 @@
 package renderer
 
 import (
-	domain "MazeApp/internal/domain"
+	domain "maze/internal/domain"
 )
 
 const (
@@ -46,7 +46,7 @@ func renderRowTop(row []domain.Cell) string {
 func renderRowMiddle(row []domain.Cell) string {
 	var result string
 
-	for h := 0; h < 3; h++ {
+	for h := range 3 {
 		for _, cell := range row {
 			result += renderCellMiddle(cell, h)
 		}
@@ -120,7 +120,7 @@ func (simple SimpleRenderer) RenderWithPath(maze domain.Maze, path []domain.Coor
 func renderRowMiddleWithPath(row []domain.Cell, path []domain.Coordinate) string {
 	var result string
 
-	for h := 0; h < 3; h++ {
+	for h := range 3 {
 		for _, cell := range row {
 			result += renderCellMiddleWithPath(cell, h, path)
 		}
@@ -150,8 +150,11 @@ func renderCellMiddleWithPath(cell domain.Cell, row int, path []domain.Coordinat
 }
 
 func renderSurfaceWithPath(cell domain.Cell, path []domain.Coordinate) string {
-	for _, coord := range path {
+	for idx, coord := range path {
 		if cell.Coordinate() == coord {
+			if idx == 0 || idx == len(path)-1 {
+				return "  📍   "
+			}
 			return "  🟥   "
 		}
 	}

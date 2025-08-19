@@ -1,8 +1,8 @@
 package generators
 
 import (
-	domain "MazeApp/internal/domain"
-	algorithm "MazeApp/pkg/algorithm"
+	domain "maze/internal/domain"
+	algorithm "maze/pkg/algorithm"
 )
 
 type KruskalGenerator struct{}
@@ -14,8 +14,8 @@ func (generator *KruskalGenerator) Generate(height, width int) domain.Maze {
 
 	disjointSet := algorithm.NewDisjointSet[domain.Coordinate]()
 
-	for row := 0; row < height; row++ {
-		for column := 0; column < width; column++ {
+	for row := range height {
+		for column := range width {
 			disjointSet.MakeSet(domain.NewCoordinate(row, column))
 		}
 	}
@@ -36,8 +36,8 @@ func (generator *KruskalGenerator) Generate(height, width int) domain.Maze {
 func (generator *KruskalGenerator) edges(maze *domain.Maze, height, width int) []domain.Edge {
 	edges := []domain.Edge{}
 
-	for row := 0; row < height; row++ {
-		for column := 0; column < width; column++ {
+	for row := range height {
+		for column := range width {
 			start := domain.NewCoordinate(row, column)
 
 			if column < width-1 {

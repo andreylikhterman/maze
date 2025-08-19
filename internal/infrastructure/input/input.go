@@ -1,9 +1,9 @@
 package input
 
 import (
-	domain "MazeApp/internal/domain"
 	"bufio"
 	"fmt"
+	domain "maze/internal/domain"
 	"os"
 	"regexp"
 	"strconv"

@@ -1,6 +1,6 @@
 package domain
 
-import algorithm "MazeApp/pkg/algorithm"
+import algorithm "maze/pkg/algorithm"
 
 type Maze struct {
 	width, height int

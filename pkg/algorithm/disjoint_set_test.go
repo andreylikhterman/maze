@@ -9,9 +9,9 @@ import (
 func TestNewDisjointSet(t *testing.T) {
 	dSet := NewDisjointSet[int]()
 
-	assert.NotNil(t, dSet, "Expected NewDisjointSet to return a non-nil value")
-	assert.Empty(t, dSet.parent, "New DisjointSet should have an empty parent map")
-	assert.Empty(t, dSet.rank, "New DisjointSet should have an empty rank map")
+	assert.NotNil(t, dSet)
+	assert.Empty(t, dSet.parent)
+	assert.Empty(t, dSet.rank)
 }
 
 func TestDisjointSet_MakeSet(t *testing.T) {

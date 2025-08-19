@@ -3,7 +3,7 @@ package solvers
 import (
 	"testing"
 
-	domain "MazeApp/internal/domain"
+	domain "maze/internal/domain"
 
 	"github.com/stretchr/testify/assert"
 )
