@@ -19,15 +19,15 @@
 
 ### Способ 1: запуск напрямую
 ```bash
-git clone https://github.com/andreylikhterman/maze-solver.git
-cd maze-solver
+git clone https://github.com/andreylikhterman/maze.git
+cd maze
 go run cmd/maze/main.go
 ```
 
 ### Способ 2: сборка и запуск бинарника
 ```bash
-git clone https://github.com/andreylikhterman/maze-solver.git
-cd maze-solver
+git clone https://github.com/andreylikhterman/maze.git
+cd maze
 make build
 ./bin/maze
 ```
